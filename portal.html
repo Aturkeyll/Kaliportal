@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portal</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .base {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+            background: #66D3EE;
+            color: white;
+            font-size: 30px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: black;
+            color: white;
+            font-size: 20px;
+            box-sizing: border-box;
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .footer img {
+            filter: invert(1);
+        }
+        .header img {
+            height: 70px;
+        }
+        .header a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .half1, .half2, .or {
+            width: 100%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align content to the left */
+            margin-bottom: 20px;
+        }
+
+        .half1 a {
+            font-family: 'Roboto', sans-serif;
+     
+        }
+
+
+        .half1 button, .half2 button {
+            background-color: #66D3EE;
+            border: none;
+            color: darkblue;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .form {
+            width: 100%;
+        }
+
+        .or {
+            align-items: center;
+        }
+        .or img {
+            margin: 0 auto;
+            display: block;
+        }
+
+        form input {
+            width: 375px;
+            padding: 10px;
+        }
+
+        form p {
+            font-family: 'Roboto', sans-serif;
+            color: #212121;
+
+        }
+
+        form button {
+            width: 400px;
+        }
+
+        h1, h3 {
+            font-family: 'Roboto', sans-serif;
+            color: #212121;
+        }
+    </style>
+    
+</head>
+<body>
+
+
+    <?php 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    }
+    
+    
+    ?> 
+
+    <div class="base">
+        <div class="header">
+            <img src="D:\fake portal\download.png" alt="Logo">
+            <a href="#1">Help</a>
+        </div>
+
+        <div class="half1">
+            <a href="#1"> Back</a>
+            <h1>Sign in with myGov</h1>
+            <h3>choose how to sign in</h3>
+            <button>Sign in with Digital ID</button> <br> <br>
+            <button>Sign in with passkey</button>
+            <p>Learn about <a href="">passkeys</a></p>
+        </div>
+
+        <div class="or">
+            <img src="D:\fake portal\or.png" alt="">
+        </div>
+
+        <div class="half2">
+            <h1>Use your MyGov sign in details</h1>
+            <div class="form">
+                <form action="" method="post">
+                    <p><b>Username or email</b> <br> <input type="text" name="username" id="username"> <a href="#1"> <br> Forgot username</a> </p>
+                    <p><b>Password</b> <br> <input type="password" name="password" id="password"> <a href="#1"> <br> Forgot password</a></p>
+                    <br>
+                <button>Sign In</button>
+                <br>
+                <p><a href="">Create a myGov account</a> if you don't have one already</p>
+</form>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="D:\fake portal\download.png" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>
